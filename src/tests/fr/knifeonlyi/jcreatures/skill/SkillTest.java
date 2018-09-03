@@ -3,8 +3,6 @@ package fr.knifeonlyi.jcreatures.skill;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class SkillTest {
 
     private static final String CHANGE_LIFE_MORE_NAME = "Life+";

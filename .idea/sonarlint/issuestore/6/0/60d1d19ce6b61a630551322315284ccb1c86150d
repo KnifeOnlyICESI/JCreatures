@@ -1,0 +1,19 @@
+
+squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚ëô¡şÿÿÿÿ
+csquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(‚ëô¡şÿÿÿÿ
+—squid:S1186#"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¶½œ
+\squid:S1068
+"9Remove this unused "CHANGE_LIFE_MORE_NAME" private field.(Õäğıÿÿÿÿ8‰ß²ûÙ,
+]squid:S1068":Remove this unused "CHANGE_LIFE_MORE_VALUE" private field.(•ª¼ıÿÿÿÿ8‰ß²ûÙ,
+\squid:S1068"9Remove this unused "CHANGE_LIFE_LESS_NAME" private field.(ş×À»üÿÿÿÿ8‰ß²ûÙ,
+]squid:S1068":Remove this unused "CHANGE_LIFE_LESS_VALUE" private field.(éº»şÿÿÿÿ8‰ß²ûÙ,
+Xsquid:S1068":Remove this unused "CHANGE_ARMOR_MORE_NAME" private field.(ğÑŒ–8‰ß²ûÙ,
+Ysquid:S1068";Remove this unused "CHANGE_ARMOR_MORE_VALUE" private field.(¶©´¿8‰ß²ûÙ,
+]squid:S1068":Remove this unused "CHANGE_ARMOR_LESS_NAME" private field.(ÚğÇ«ıÿÿÿÿ8‰ß²ûÙ,
+^squid:S1068";Remove this unused "CHANGE_ARMOR_LESS_VALUE" private field.(†²×úÿÿÿÿ8‰ß²ûÙ,
+Wsquid:S1068"4Remove this unused "CHANGE_LIFE_CARA" private field.(ÒÎ©¯ıÿÿÿÿ8‰ß²ûÙ,
+Ssquid:S1068"0Remove this unused "CHANGE_ARMOR" private field.(“Á›Çùÿÿÿÿ8‰ß²ûÙ,
+Osquid:S1068"2Remove this unused "changeLifeMore" private field.(‚¼¿h8‰ß²ûÙ,
+Usquid:S1068"2Remove this unused "changeLifeLess" private field.(éšµ±üÿÿÿÿ8‰ß²ûÙ,
+Vsquid:S1068"3Remove this unused "changeArmorMore" private field.(İª†ùÿÿÿÿ8‰ß²ûÙ,
+Qsquid:S1068"3Remove this unused "changeArmorLess" private field.(©¾áÖ8‰ß²ûÙ,
