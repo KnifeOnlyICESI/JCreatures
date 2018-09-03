@@ -33,8 +33,7 @@ public class CreatureFactory {
      * Create a new creature.
      *
      * @param creatureType The creature type.
-     * @param name The creature name.
-     *
+     * @param name         The creature name.
      * @return The created creature.
      */
     public CreatureInterface createCreature(CreatureType creatureType, String name) {
@@ -60,7 +59,6 @@ public class CreatureFactory {
      * Create a dragon creature.
      *
      * @param name The creature name.
-     *
      * @return The dragon created.
      */
     private CreatureInterface createDragon(String name) {
@@ -71,6 +69,7 @@ public class CreatureFactory {
             CreatureFactory.DRAGON_FIREBALL_VALUE,
             Caracteristic.CHANGE_LIFE
         ));
+
         skills.add(new Skill(
             CreatureFactory.DRAGON_HEAL_NAME,
             CreatureFactory.DRAGON_HEAL_VALUE,
@@ -90,7 +89,6 @@ public class CreatureFactory {
      * Create a hunter creature.
      *
      * @param name The creature name.
-     *
      * @return The hunter created.
      */
     private CreatureInterface createHunter(String name) {
@@ -101,6 +99,7 @@ public class CreatureFactory {
             CreatureFactory.HUNTER_BOOST_VALUE,
             Caracteristic.CHANGE_ARMOR
         ));
+
         skills.add(new Skill(
             CreatureFactory.HUNTER_HEAL_NAME,
             CreatureFactory.HUNTER_HEAL_VALUE,
