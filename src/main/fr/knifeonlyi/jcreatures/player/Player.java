@@ -22,6 +22,7 @@ public final class Player implements PlayerInterface {
      */
     private Player(String name) {
         this.name = name;
+        this.creatures = new ArrayList<>();
     }
 
     @Override

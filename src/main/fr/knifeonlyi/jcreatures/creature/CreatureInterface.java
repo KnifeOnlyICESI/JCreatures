@@ -85,4 +85,11 @@ public interface CreatureInterface {
      * @param target The target.
      */
     void attack(CreatureInterface target);
+
+    /**
+     * Check if the creature is alive.
+     *
+     * @return TRUE if creature is alive. FALSE otherwise.
+     */
+    Boolean isAlive();
 }

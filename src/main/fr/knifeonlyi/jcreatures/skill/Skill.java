@@ -11,9 +11,9 @@ public class Skill extends AbstractSkill {
     @Override
     public void execute(CreatureInterface summoner, CreatureInterface target) {
         if (this.getCaracteristic() == Caracteristic.CHANGE_LIFE) {
-            target.setHP(target.getHP() - this.getValue());
+            target.setHP(target.getHP() + this.getValue());
         } else if (this.getCaracteristic() == Caracteristic.CHANGE_ARMOR) {
-            target.setAP(target.getAP() - this.getValue());
+            target.setAP(target.getAP() + this.getValue());
         }
     }
 }

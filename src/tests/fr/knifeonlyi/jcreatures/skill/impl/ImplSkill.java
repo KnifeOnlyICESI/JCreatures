@@ -1,6 +1,8 @@
-package fr.knifeonlyi.jcreatures.skill;
+package fr.knifeonlyi.jcreatures.skill.impl;
 
 import fr.knifeonlyi.jcreatures.creature.CreatureInterface;
+import fr.knifeonlyi.jcreatures.skill.AbstractSkill;
+import fr.knifeonlyi.jcreatures.skill.Caracteristic;
 
 public class ImplSkill extends AbstractSkill {
 
