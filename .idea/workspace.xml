@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee30a249-fad0-4741-aeb9-b8b22c114947" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,46 +28,37 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="96" />
+          <entry key="java" value="100" />
           <entry key="swp" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="96" />
+          <entry key="JAVA" value="100" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="55" />
-          <entry key="java" value="9024" />
+          <entry key="dummy" value="56" />
+          <entry key="java" value="9113" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9024" />
-          <entry key="PLAIN_TEXT" value="55" />
+          <entry key="JAVA" value="9113" />
+          <entry key="PLAIN_TEXT" value="56" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tests/fr/knifeonlyi/jcreatures/creature/ImplCreatureTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/player/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="406">
+              <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -77,12 +68,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Arquillian JUnit Test Class" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -151,6 +142,8 @@
         <option value="$PROJECT_DIR$/src/tests/fr/knifeonlyi/jcreatures/player/PlayerTest.java" />
         <option value="$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/player/Player.java" />
         <option value="$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/ai/AIInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/ai/AICreatures.java" />
       </list>
     </option>
   </component>
@@ -213,6 +206,51 @@
               <item name="JCreatures" type="b2602c69:ProjectViewProjectNode" />
               <item name="JCreatures" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="JCreatures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JCreatures" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JCreatures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JCreatures" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JCreatures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JCreatures" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="fr" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JCreatures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JCreatures" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="fr" type="462c0819:PsiDirectoryNode" />
+              <item name="knifeonlyi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JCreatures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JCreatures" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="fr" type="462c0819:PsiDirectoryNode" />
+              <item name="knifeonlyi" type="462c0819:PsiDirectoryNode" />
+              <item name="jcreatures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JCreatures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JCreatures" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="fr" type="462c0819:PsiDirectoryNode" />
+              <item name="knifeonlyi" type="462c0819:PsiDirectoryNode" />
+              <item name="jcreatures" type="462c0819:PsiDirectoryNode" />
+              <item name="player" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -226,7 +264,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535981188536" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535983915261" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -360,17 +398,11 @@
       <workItem from="1535973085436" duration="7763000" />
       <workItem from="1535980877649" duration="23000" />
       <workItem from="1535980919214" duration="8000" />
-      <workItem from="1535980957393" duration="132000" />
+      <workItem from="1535980957393" duration="1650000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ImplCreatureTest_testAttack - 2018.09.03 at 15h 08m 47s.xml">
-      <configuration name="ImplCreatureTest.testAttack" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ImplCreatureTest_testAttack - 2018.09.03 at 15h 09m 00s.xml">
-      <configuration name="ImplCreatureTest.testAttack" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ImplCreatureTest_testAttack - 2018.09.03 at 15h 11m 59s.xml">
       <configuration name="ImplCreatureTest.testAttack" configurationId="JUnit" />
     </history-entry>
@@ -395,9 +427,15 @@
     <history-entry file="All_in_JCreatures - 2018.09.03 at 15h 24m 01s.xml">
       <configuration name="All in JCreatures" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_JCreatures - 2018.09.03 at 15h 25m 02s.xml">
+      <configuration name="All in JCreatures" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_JCreatures - 2018.09.03 at 15h 26m 19s.xml">
+      <configuration name="All in JCreatures" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17545000" />
+    <option name="totallyTimeSpent" value="19063000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="990" extended-state="6" />
@@ -412,7 +450,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.21976744" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21976744" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -566,24 +604,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/player/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        <state relative-caret-position="203">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/fr/knifeonlyi/jcreatures/creature/ImplCreatureTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="203">
+          <caret line="16" column="57" lean-forward="true" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/ai/AIInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="145">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/ai/AICreatures.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/player/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
         </state>
       </provider>
     </entry>
