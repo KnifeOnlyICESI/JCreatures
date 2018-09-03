@@ -1,5 +1,10 @@
 package fr.knifeonlyi.jcreatures.player;
 
+import fr.knifeonlyi.jcreatures.creature.CreatureInterface;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Represent a player.
  */
@@ -8,6 +13,7 @@ public final class Player implements PlayerInterface {
     private static Player selfInstance;
 
     private String name;
+    private List<CreatureInterface> creatures;
 
     /**
      * Initialize a new player.
@@ -24,8 +30,18 @@ public final class Player implements PlayerInterface {
     }
 
     @Override
+    public List<CreatureInterface> getCreatures() {
+        return new ArrayList<>(this.creatures);
+    }
+
+    @Override
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public void setCreatures(List<CreatureInterface> creatures) {
+        this.creatures = new ArrayList<>(creatures);
     }
 
     /**
