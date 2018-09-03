@@ -31,6 +31,13 @@ public interface CreatureInterface {
     Integer getAP();
 
     /**
+     * Get the strength.
+     *
+     * @return The strength.
+     */
+    Integer getStrength();
+
+    /**
      * Get the skills.
      *
      * @return The skills.
@@ -57,6 +64,13 @@ public interface CreatureInterface {
      * @param ap The new armor points.
      */
     void setAP(Integer ap);
+
+    /**
+     * Set the strength.
+     *
+     * @param strength The new strength.
+     */
+    void setStrength(Integer strength);
 
     /**
      * Set the skills.

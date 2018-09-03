@@ -13,6 +13,7 @@ public abstract class AbstractCreature implements CreatureInterface {
     private String name;
     private Integer healthPoints;
     private Integer armorPoints;
+    private Integer strength;
     private List<SkillInterface> skills;
 
     /**
@@ -21,12 +22,20 @@ public abstract class AbstractCreature implements CreatureInterface {
      * @param name         The name.
      * @param healthPoints The health points.
      * @param armorPoints  The armor points.
+     * @param strength     The strength.
      * @param skills       The skills.
      */
-    public AbstractCreature(String name, Integer healthPoints, Integer armorPoints, List<SkillInterface> skills) {
+    public AbstractCreature(
+        String name,
+        Integer healthPoints,
+        Integer armorPoints,
+        Integer strength,
+        List<SkillInterface> skills
+    ) {
         this.name = name;
         this.healthPoints = healthPoints;
         this.armorPoints = armorPoints;
+        this.strength = strength;
         this.skills = new ArrayList<>(skills);
 
         if (this.healthPoints < 0) {
@@ -54,8 +63,12 @@ public abstract class AbstractCreature implements CreatureInterface {
     }
 
     @Override
-    public List<SkillInterface> getSkills() {
+    public Integer getStrength() {
+        return this.strength;
+    }
 
+    @Override
+    public List<SkillInterface> getSkills() {
         return new ArrayList<>(this.skills);
     }
 
@@ -83,8 +96,17 @@ public abstract class AbstractCreature implements CreatureInterface {
     }
 
     @Override
+    public void setStrength(Integer strength) {
+        this.strength = strength;
+    }
+
+    @Override
     public void setSkills(List<SkillInterface> skills) {
         this.skills = new ArrayList<>(skills);
+    }
+
+    public void attack(CreatureInterface target) {
+        target.setHP(target.getHP() - this.strength);
     }
 
     public Boolean isAlive() {

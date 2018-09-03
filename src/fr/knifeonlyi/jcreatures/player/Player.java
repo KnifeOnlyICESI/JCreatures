@@ -3,7 +3,7 @@ package fr.knifeonlyi.jcreatures.player;
 /**
  * Represent a player.
  */
-public class Player implements PlayerInterface {
+public final class Player implements PlayerInterface {
 
     private static Player selfInstance;
 
