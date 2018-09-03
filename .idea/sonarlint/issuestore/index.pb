@@ -35,3 +35,11 @@ i
 9src/tests/fr/knifeonlyi/jcreatures/player/PlayerTest.java,e/8/e85d38c2be354044806a38263cec0095b4725649
 d
 4src/main/fr/knifeonlyi/jcreatures/player/Player.java,a/b/abefeff194fd0fb737b327acf25579f1df4c071f
+g
+7src/main/fr/knifeonlyi/jcreatures/action/player/UI.java,a/a/aab0cdc9b1edcacc29535461950dbe1d6886ef2e
+l
+<src/main/fr/knifeonlyi/jcreatures/action/player/Console.java,8/6/8643c2d7d10620b195c79b64e72fe4053c73038a
+k
+;src/main/fr/knifeonlyi/jcreatures/action/player/Random.java,e/d/edfba613758c90e39594f788335b2e8a395d3c9e
+z
+Jsrc/main/fr/knifeonlyi/jcreatures/action/player/ActionPlayerInterface.java,f/c/fc6cff4efb98f60c6220dc307f50f6394c89dcba

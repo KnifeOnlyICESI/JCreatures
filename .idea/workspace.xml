@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee30a249-fad0-4741-aeb9-b8b22c114947" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/action/player/ActionPlayerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/action/player/ActionPlayerInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/action/player/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/action/player/Console.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/action/player/Random.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/action/player/Random.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/action/player/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/action/player/UI.java" afterDir="false" />
-    </list>
+    <list default="true" id="ee30a249-fad0-4741-aeb9-b8b22c114947" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +16,7 @@
     <session id="-1735270798">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.3" value="2" />
@@ -61,35 +55,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/player/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/action/player/ActionPlayerInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="26" column="72" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/action/player/Random.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="7" column="54" lean-forward="true" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="493">
+              <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -458,7 +428,7 @@
       <workItem from="1535980877649" duration="23000" />
       <workItem from="1535980919214" duration="8000" />
       <workItem from="1535980957393" duration="4709000" />
-      <workItem from="1536001978545" duration="379000" />
+      <workItem from="1536001978545" duration="1403000" />
     </task>
     <servers />
   </component>
@@ -495,11 +465,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22501000" />
+    <option name="totallyTimeSpent" value="23525000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1080" y="-2" width="1920" height="1017" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10458911" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -698,13 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/player/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/action/player/UI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -725,6 +687,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/action/player/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="7" column="54" lean-forward="true" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/action/player/ActionPlayerInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="603">
@@ -735,13 +707,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/action/player/Random.java">
+    <entry file="file://$PROJECT_DIR$/src/main/fr/knifeonlyi/jcreatures/player/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="54" lean-forward="true" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="493">
+          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
         </state>
       </provider>
     </entry>
