@@ -1,7 +1,5 @@
 package fr.knifeonlyi.jcreatures.skill;
 
-import fr.knifeonlyi.jcreatures.creature.CreatureInterface;
-
 public abstract class AbstractSkill implements SkillInterface {
 
     private String name;
@@ -43,7 +41,4 @@ public abstract class AbstractSkill implements SkillInterface {
     public void setCaracteristic(Caracteristic caracteristic) {
         this.caracteristic = caracteristic;
     }
-
-    @Override
-    public abstract void execute(CreatureInterface summoner, CreatureInterface target);
 }
