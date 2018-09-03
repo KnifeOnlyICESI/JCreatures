@@ -12,9 +12,16 @@ public class Creature extends AbstractCreature {
      * @param name         The name.
      * @param healthPoints The health points.
      * @param armorPoints  The armor points.
+     * @param strength     The strength.
      * @param skills       The skills.
      */
-    public Creature(String name, Integer healthPoints, Integer armorPoints, List<SkillInterface> skills) {
-        super(name, healthPoints, armorPoints, skills);
+    public Creature(
+        String name,
+        Integer healthPoints,
+        Integer armorPoints,
+        Integer strength,
+        List<SkillInterface> skills
+    ) {
+        super(name, healthPoints, armorPoints, strength, skills);
     }
 }
