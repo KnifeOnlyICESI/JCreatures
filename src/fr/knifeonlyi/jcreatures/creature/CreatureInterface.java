@@ -78,4 +78,11 @@ public interface CreatureInterface {
      * @param skills The skills.
      */
     void setSkills(List<SkillInterface> skills);
+
+    /**
+     * Attack the specified target (other creature).
+     *
+     * @param target The target.
+     */
+    void attack(CreatureInterface target);
 }

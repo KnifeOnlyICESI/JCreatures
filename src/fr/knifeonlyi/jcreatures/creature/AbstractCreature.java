@@ -105,10 +105,16 @@ public abstract class AbstractCreature implements CreatureInterface {
         this.skills = new ArrayList<>(skills);
     }
 
+    @Override
     public void attack(CreatureInterface target) {
         target.setHP(target.getHP() - this.strength);
     }
 
+    /**
+     * Check if the creature is alive.
+     *
+     * @return TRUE if creature is alive. FALSE otherwise.
+     */
     public Boolean isAlive() {
         return (this.healthPoints > 0);
     }
