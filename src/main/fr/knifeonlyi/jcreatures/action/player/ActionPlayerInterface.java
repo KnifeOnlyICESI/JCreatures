@@ -1,4 +1,4 @@
-package fr.knifeonlyi.jcreatures.action;
+package fr.knifeonlyi.jcreatures.action.player;
 
 import fr.knifeonlyi.jcreatures.creature.CreatureInterface;
 import fr.knifeonlyi.jcreatures.skill.SkillInterface;
