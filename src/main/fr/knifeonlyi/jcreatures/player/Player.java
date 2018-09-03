@@ -10,8 +10,6 @@ import java.util.List;
  */
 public final class Player implements PlayerInterface {
 
-    private static Player selfInstance;
-
     private String name;
     private List<CreatureInterface> creatures;
 
@@ -43,19 +41,5 @@ public final class Player implements PlayerInterface {
     @Override
     public void setCreatures(List<CreatureInterface> creatures) {
         this.creatures = new ArrayList<>(creatures);
-    }
-
-    /**
-     * Get an instance of player.
-     *
-     * @param name The name.
-     * @return The unique instance of player (Singleton pattern).
-     */
-    public static Player getInstance(String name) {
-        if (selfInstance == null) {
-            selfInstance = new Player(name);
-        }
-
-        return selfInstance;
     }
 }
