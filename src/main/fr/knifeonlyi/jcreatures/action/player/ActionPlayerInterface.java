@@ -19,18 +19,18 @@ public interface ActionPlayerInterface {
     SkillInterface choiceSkill(List<SkillInterface> skills);
 
     /**
-     * Choice an action into the specified actions and return the choice.
-     *
-     * @param actions The actions.
-     * @return The choosen action.
-     */
-    Integer choiceAction(List<String> actions);
-
-    /**
      * Choice a creature into the specified creatures and return the choice.
      *
      * @param creatures The creatures.
      * @return The choosen creatures.
      */
     CreatureInterface choiceCreature(List<CreatureInterface> creatures);
+
+    /**
+     * Choice an action into the specified actions and return the choice.
+     *
+     * @param actions The actions.
+     * @return The choosen action.
+     */
+    Integer choiceAction(List<String> actions);
 }

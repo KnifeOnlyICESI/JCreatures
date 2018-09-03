@@ -13,12 +13,12 @@ public class UI implements ActionPlayerInterface {
     }
 
     @Override
-    public Integer choiceAction(List<String> actions) {
+    public CreatureInterface choiceCreature(List<CreatureInterface> creatures) {
         return null;
     }
 
     @Override
-    public CreatureInterface choiceCreature(List<CreatureInterface> creatures) {
+    public Integer choiceAction(List<String> actions) {
         return null;
     }
 }
