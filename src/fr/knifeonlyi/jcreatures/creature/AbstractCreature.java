@@ -1,25 +1,41 @@
 package fr.knifeonlyi.jcreatures.creature;
 
+import fr.knifeonlyi.jcreatures.skill.SkillInterface;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * The base class for all creatures.
  */
 public abstract class AbstractCreature implements CreatureInterface {
 
     private String name;
-    private Integer hp;
-    private Integer ap;
+    private Integer healthPoints;
+    private Integer armorPoints;
+    private List<SkillInterface> skills;
 
     /**
      * Initialize a new creature.
      *
-     * @param name The name.
-     * @param hp   The health points.
-     * @param ap   The armor points.
+     * @param name         The name.
+     * @param healthPoints The health points.
+     * @param armorPoints  The armor points.
+     * @param skills       The skills.
      */
-    public AbstractCreature(String name, Integer hp, Integer ap) {
+    public AbstractCreature(String name, Integer healthPoints, Integer armorPoints, List<SkillInterface> skills) {
         this.name = name;
-        this.hp = hp;
-        this.ap = ap;
+        this.healthPoints = healthPoints;
+        this.armorPoints = armorPoints;
+        this.skills = new ArrayList<>(skills);
+
+        if (this.healthPoints < 0) {
+            this.healthPoints = 0;
+        }
+
+        if (this.armorPoints < 0) {
+            this.armorPoints = 0;
+        }
     }
 
     @Override
@@ -29,12 +45,18 @@ public abstract class AbstractCreature implements CreatureInterface {
 
     @Override
     public Integer getHP() {
-        return this.hp;
+        return this.healthPoints;
     }
 
     @Override
     public Integer getAP() {
-        return this.ap;
+        return this.armorPoints;
+    }
+
+    @Override
+    public List<SkillInterface> getSkills() {
+
+        return new ArrayList<>(this.skills);
     }
 
     @Override
@@ -43,12 +65,29 @@ public abstract class AbstractCreature implements CreatureInterface {
     }
 
     @Override
-    public void setHP(Integer hp) {
-        this.hp = hp;
+    public void setHP(Integer healthPoints) {
+        this.healthPoints = healthPoints;
+
+        if (this.healthPoints < 0) {
+            this.healthPoints = 0;
+        }
     }
 
     @Override
-    public void setAP(Integer ap) {
-        this.ap = ap;
+    public void setAP(Integer armorPoints) {
+        this.armorPoints = armorPoints;
+
+        if (this.armorPoints < 0) {
+            this.armorPoints = 0;
+        }
+    }
+
+    @Override
+    public void setSkills(List<SkillInterface> skills) {
+        this.skills = new ArrayList<>(skills);
+    }
+
+    public Boolean isAlive() {
+        return (this.healthPoints > 0);
     }
 }

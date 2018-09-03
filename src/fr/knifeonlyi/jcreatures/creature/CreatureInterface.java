@@ -1,5 +1,9 @@
 package fr.knifeonlyi.jcreatures.creature;
 
+import fr.knifeonlyi.jcreatures.skill.SkillInterface;
+
+import java.util.List;
+
 /**
  * The base interface for all creatures.
  */
@@ -27,6 +31,13 @@ public interface CreatureInterface {
     Integer getAP();
 
     /**
+     * Get the skills.
+     *
+     * @return The skills.
+     */
+    List<SkillInterface> getSkills();
+
+    /**
      * Set the name.
      *
      * @param name The new name.
@@ -46,4 +57,11 @@ public interface CreatureInterface {
      * @param ap The new armor points.
      */
     void setAP(Integer ap);
+
+    /**
+     * Set the skills.
+     *
+     * @param skills The skills.
+     */
+    void setSkills(List<SkillInterface> skills);
 }
