@@ -13,7 +13,7 @@ public class PlayerTest {
 
     @Before
     public void setUp() {
-        player = Player.getInstance(PlayerTest.NAME);
+        player = new Player("Dany");
     }
 
     @Test

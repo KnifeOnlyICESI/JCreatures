@@ -16,7 +16,7 @@ public interface ActionPlayerInterface {
      * @param skills The skills.
      * @return The choosen skill.
      */
-    SkillInterface choiceSkill(List<SkillInterface> skills);
+    SkillInterface choiceSkill(List<SkillInterface> skills) throws InterruptedException;
 
     /**
      * Choice a creature into the specified creatures and return the choice.
@@ -24,7 +24,7 @@ public interface ActionPlayerInterface {
      * @param creatures The creatures.
      * @return The choosen creatures.
      */
-    CreatureInterface choiceCreature(List<CreatureInterface> creatures);
+    CreatureInterface choiceCreature(List<CreatureInterface> creatures) throws InterruptedException;
 
     /**
      * Choice an action into the specified actions and return the choice.
@@ -32,5 +32,5 @@ public interface ActionPlayerInterface {
      * @param actions The actions.
      * @return The choosen action.
      */
-    Integer choiceAction(List<String> actions);
+    Integer choiceAction(List<String> actions) throws InterruptedException;
 }

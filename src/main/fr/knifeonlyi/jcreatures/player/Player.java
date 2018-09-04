@@ -18,7 +18,7 @@ public final class Player implements PlayerInterface {
      *
      * @param name The name.
      */
-    private Player(String name) {
+    public Player(String name) {
         this.name = name;
         this.creatures = new ArrayList<>();
     }
