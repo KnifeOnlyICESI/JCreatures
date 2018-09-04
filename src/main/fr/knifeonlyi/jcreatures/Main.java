@@ -1,72 +1,39 @@
 package fr.knifeonlyi.jcreatures;
 
-import fr.knifeonlyi.jcreatures.action.player.ActionPlayerInterface;
-import fr.knifeonlyi.jcreatures.action.player.ConsoleAction;
-import fr.knifeonlyi.jcreatures.action.player.RandomAction;
 import fr.knifeonlyi.jcreatures.creature.CreatureFactory;
 import fr.knifeonlyi.jcreatures.creature.CreatureInterface;
 import fr.knifeonlyi.jcreatures.creature.CreatureType;
-import fr.knifeonlyi.jcreatures.skill.SkillInterface;
+import fr.knifeonlyi.jcreatures.fight.arena.Duel;
+import fr.knifeonlyi.jcreatures.player.Player;
+import fr.knifeonlyi.jcreatures.player.PlayerInterface;
+import fr.knifeonlyi.jcreatures.player.PlayerType;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    private static ActionPlayerInterface console = new ConsoleAction();
-    private static ActionPlayerInterface random = new RandomAction();
-    private static CreatureFactory creatureFactory = new CreatureFactory();
+    private static final CreatureFactory CREATURE_FACTORY = new CreatureFactory();
 
     public static void main(String[] args) {
+        PlayerInterface player1 = new Player("Dany", PlayerType.HUMAN);
+        PlayerInterface player2 = new Player("AI", PlayerType.PNJ);
+
+        List<CreatureInterface> creaturesPlayer1 = new ArrayList<>();
+        List<CreatureInterface> creaturesPlayer2 = new ArrayList<>();
+
+        Duel duel = new Duel(player1, player2);
+
+        creaturesPlayer1.add(CREATURE_FACTORY.createCreature(CreatureType.DRAGON, "Dragon"));
+
+        creaturesPlayer2.add(CREATURE_FACTORY.createCreature(CreatureType.HUNTER, "Hunter"));
+
+        player1.setCreatures(creaturesPlayer1);
+        player2.setCreatures(creaturesPlayer2);
+
         try {
-            testAllChoices();
+            duel.fight();
         } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
+            e.printStackTrace();
         }
-    }
-
-    private static void testAllChoices() throws InterruptedException {
-        List<String> actions = new ArrayList<>();
-        List<CreatureInterface> creatures = new ArrayList<>();
-
-        CreatureInterface choosenCreature;
-        SkillInterface choosenSkill;
-        String choosenAction;
-
-        actions.add("Attack");
-        actions.add("Defense");
-
-        creatures.add(creatureFactory.createCreature(CreatureType.DRAGON, "Dragon ultim"));
-        creatures.add(creatureFactory.createCreature(CreatureType.HUNTER, "Hunter ultim"));
-        creatures.add(creatureFactory.createCreature(CreatureType.DRAGON, "Dragon"));
-        creatures.add(creatureFactory.createCreature(CreatureType.HUNTER, "Hunter"));
-
-        choosenCreature = console.choiceCreature(creatures);
-        choosenSkill = console.choiceSkill(choosenCreature.getSkills());
-        choosenAction = actions.get(console.choiceAction(actions));
-
-        System.out.println(
-            String.format(
-                "Action : %s%nCreature : %s%nSkill : %s",
-                choosenAction,
-                choosenCreature.getName(),
-                choosenSkill.getName()
-            )
-        );
-
-        choosenCreature = random.choiceCreature(creatures);
-        choosenSkill = random.choiceSkill(choosenCreature.getSkills());
-        choosenAction = actions.get(random.choiceAction(actions));
-
-        System.out.println("=========================================");
-        System.out.println();
-
-        System.out.println(
-            String.format(
-                "Action : %s%nCreature : %s%nSkill : %s",
-                choosenAction,
-                choosenCreature.getName(),
-                choosenSkill.getName()
-            )
-        );
     }
 }

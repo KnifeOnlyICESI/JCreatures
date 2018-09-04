@@ -4,14 +4,21 @@ import fr.knifeonlyi.jcreatures.action.player.ActionPlayerInterface;
 import fr.knifeonlyi.jcreatures.action.player.ConsoleAction;
 import fr.knifeonlyi.jcreatures.action.player.RandomAction;
 import fr.knifeonlyi.jcreatures.creature.CreatureInterface;
+import fr.knifeonlyi.jcreatures.skill.SkillInterface;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
  * Represent a player.
  */
 public final class Player implements PlayerInterface {
+
+    private static final String PLAYER_ACTIONS_ATTACK = "Attaquer";
+    private static final String PLAYER_ACTIONS_ESCAPE = "S'enfuir";
+    private static final String CREATURE_ACTIONS_BASE_ATTACK = "Attaque de base";
+    private static final String CREATURE_ACTIONS_SKILL_ATTACK = "Compétence spéciale";
 
     private String name;
     private List<CreatureInterface> creatures;
@@ -45,6 +52,19 @@ public final class Player implements PlayerInterface {
         return new ArrayList<>(this.creatures);
     }
 
+    @Override
+    public List<CreatureInterface> getAliveCreatures() {
+        List<CreatureInterface> aliveCreatures = new ArrayList<>();
+
+        for (CreatureInterface creature: this.creatures) {
+            if (creature.isAlive()) {
+                aliveCreatures.add(creature);
+            }
+        }
+        
+        return aliveCreatures;
+    }
+
     public PlayerType getType() {
         return this.type;
     }
@@ -57,5 +77,61 @@ public final class Player implements PlayerInterface {
     @Override
     public void setCreatures(List<CreatureInterface> creatures) {
         this.creatures = new ArrayList<>(creatures);
+    }
+
+    @Override
+    public Boolean attack(PlayerInterface target) throws InterruptedException {
+        Integer actionPlayerChoice;
+        Integer creaturePlayerChoice;
+
+        String[] playerActions = {PLAYER_ACTIONS_ATTACK, PLAYER_ACTIONS_ESCAPE};
+        String[] creatureActions = {CREATURE_ACTIONS_BASE_ATTACK, CREATURE_ACTIONS_SKILL_ATTACK};
+
+        CreatureInterface engagedCreature;
+        CreatureInterface targetCreature;
+        SkillInterface engagedSkill;
+
+        if (!target.hasAliveCreatures()) {
+            return false;
+        } else {
+            actionPlayerChoice = this.actionPlayer.choiceAction(Arrays.asList(playerActions));
+
+            if (PLAYER_ACTIONS_ESCAPE.equals(playerActions[actionPlayerChoice])) {
+                return false;
+            }
+
+            engagedCreature = this.actionPlayer.choiceCreature(this.creatures);
+            targetCreature = this.actionPlayer.choiceCreature(target.getCreatures());
+            creaturePlayerChoice = this.actionPlayer.choiceAction(Arrays.asList(creatureActions));
+
+            if (CREATURE_ACTIONS_BASE_ATTACK.equals(creatureActions[creaturePlayerChoice])) {
+                engagedCreature.attack(targetCreature);
+            } else {
+                engagedSkill = this.actionPlayer.choiceSkill(engagedCreature.getSkills());
+
+                engagedSkill.execute(engagedCreature, targetCreature);
+            }
+        }
+
+        return true;
+    }
+
+    @Override
+    public Boolean hasAliveCreatures() {
+        boolean hasAliveCreatures = false;
+        boolean continueSearch = true;
+        Integer nbCreatures = this.getCreatures().size();
+        Integer i = 0;
+
+        while (continueSearch && (i < nbCreatures)) {
+            if (this.getCreatures().get(i).isAlive()) {
+                continueSearch = false;
+                hasAliveCreatures = true;
+            }
+
+            i++;
+        }
+
+        return hasAliveCreatures;
     }
 }
