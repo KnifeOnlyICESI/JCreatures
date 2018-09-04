@@ -19,17 +19,17 @@ public class ConsoleAction implements ActionPlayerInterface {
     private Scanner scanner = new Scanner(System.in);
 
     @Override
-    public SkillInterface choiceSkill(List<SkillInterface> skills) throws InterruptedException {
+    public SkillInterface choiceSkill(String message, List<SkillInterface> skills) throws InterruptedException {
         List<String> skillsName = new ArrayList<>();
         int userChoice;
 
-        for (SkillInterface skill: skills) {
+        for (SkillInterface skill : skills) {
             skillsName.add(skill.getName());
         }
 
         // While the user input is not valid.
         do {
-            displayItemsMenu("Skills", skillsName);
+            displayItemsMenu("Skills", message, skillsName);
 
             userChoice = this.scanner.nextInt();
         } while (!checkInput(userChoice, skillsName.size()));
@@ -38,17 +38,18 @@ public class ConsoleAction implements ActionPlayerInterface {
     }
 
     @Override
-    public CreatureInterface choiceCreature(List<CreatureInterface> creatures) throws InterruptedException {
+    public CreatureInterface choiceCreature(String message, List<CreatureInterface> creatures) throws
+        InterruptedException {
         List<String> creaturesName = new ArrayList<>();
         int userChoice;
 
-        for (CreatureInterface creature: creatures) {
+        for (CreatureInterface creature : creatures) {
             creaturesName.add(creature.getName());
         }
 
         // While the user input is not valid.
         do {
-            displayItemsMenu("Creatures", creaturesName);
+            displayItemsMenu("Creatures", message, creaturesName);
 
             userChoice = this.scanner.nextInt();
         } while (!checkInput(userChoice, creaturesName.size()));
@@ -57,12 +58,12 @@ public class ConsoleAction implements ActionPlayerInterface {
     }
 
     @Override
-    public Integer choiceAction(List<String> actions) throws InterruptedException {
+    public Integer choiceAction(String message, List<String> actions) throws InterruptedException {
         int userChoice;
 
         // While the user input is not valid.
         do {
-            displayItemsMenu("Actions", actions);
+            displayItemsMenu("Actions", message, actions);
 
             userChoice = this.scanner.nextInt();
         } while (!checkInput(userChoice, actions.size()));
@@ -95,19 +96,21 @@ public class ConsoleAction implements ActionPlayerInterface {
     /**
      * Display the actions choice menu.
      *
-     * @param name The menu name to display.
-     * @param items The items list (to string format).
+     * @param name    The menu name to display.
+     * @param message The message to display.
+     * @param items   The items list (to string format).
      */
-    private static void displayItemsMenu(String name, List<String> items) {
+    private static void displayItemsMenu(String name, String message, List<String> items) {
         Integer nbActions = items.size();
 
-        System.out.println(String.format("============== %s Menu ==============%n", name));
+        System.out.println(String.format("============== %s Menu ==============", name));
 
         for (Integer i = 0; i < nbActions; i++) {
             System.out.println(String.format("%s. %s", (i + 1), items.get(i)));
         }
 
-        System.out.println("\n=========================================");
+        System.out.println("=========================================");
+        System.out.println(message);
         System.out.print(String.format("%s ", ConsoleAction.PROMPT));
     }
 }

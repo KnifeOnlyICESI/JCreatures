@@ -42,7 +42,7 @@ public class ImplActionPlayerTest {
         assertEquals(
             String.format("MUST be equals to %s.", SKILL_NAME),
             SKILL_NAME,
-            actionPlayer.choiceSkill(skills).getName()
+            actionPlayer.choiceSkill("", skills).getName()
         );
     }
 
@@ -51,7 +51,7 @@ public class ImplActionPlayerTest {
         assertEquals(
             String.format("MUST be equals to %s.", CREATURE_NAME),
             CREATURE_NAME,
-            actionPlayer.choiceCreature(creatures).getName()
+            actionPlayer.choiceCreature("", creatures).getName()
         );
     }
 
@@ -60,7 +60,7 @@ public class ImplActionPlayerTest {
         assertEquals(
             String.format("MUST be equals to %s.", (NB_ACTIONS - 1)),
             (NB_ACTIONS - 1),
-            (int) actionPlayer.choiceAction(actions)
+            (int) actionPlayer.choiceAction("", actions)
         );
     }
 }

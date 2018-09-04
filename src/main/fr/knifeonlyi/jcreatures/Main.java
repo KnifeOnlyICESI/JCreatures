@@ -33,7 +33,7 @@ public class Main {
         try {
             duel.fight();
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            Thread.currentThread().interrupt();
         }
     }
 }

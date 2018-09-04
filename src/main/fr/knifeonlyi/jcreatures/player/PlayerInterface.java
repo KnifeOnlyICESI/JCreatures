@@ -55,7 +55,6 @@ public interface PlayerInterface {
      * Attack an other player.
      *
      * @param target An other player to attack.
-     *
      * @return TRUE if the player can be attack. FALSE otherwise.
      */
     Boolean attack(PlayerInterface target) throws InterruptedException;

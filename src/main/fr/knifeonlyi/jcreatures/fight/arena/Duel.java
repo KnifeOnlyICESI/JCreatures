@@ -44,7 +44,7 @@ public class Duel {
      * @throws InterruptedException If an interrupted thread is detected
      */
     private Boolean executeOneTurn() throws InterruptedException {
-        if ((this.turnsCount % EVEN_CHECKER) == 0) {
+        if ((this.turnsCount % EVEN_CHECKER) != 0) {
             if (this.player1.attack(this.player2)) {
                 return this.player2.attack(player1);
             }

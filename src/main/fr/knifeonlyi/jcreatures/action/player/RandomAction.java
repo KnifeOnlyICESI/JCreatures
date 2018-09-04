@@ -14,17 +14,17 @@ public class RandomAction implements ActionPlayerInterface {
     private static SecureRandom random = new SecureRandom();
 
     @Override
-    public SkillInterface choiceSkill(List<SkillInterface> skills) {
-        return skills.get(random.nextInt(skills.size()));
+    public SkillInterface choiceSkill(String message, List<SkillInterface> skills) {
+        return skills.get(random. nextInt(skills.size()));
     }
 
     @Override
-    public CreatureInterface choiceCreature(List<CreatureInterface> creatures) {
+    public CreatureInterface choiceCreature(String message, List<CreatureInterface> creatures) {
         return creatures.get(random.nextInt(creatures.size()));
     }
 
     @Override
-    public Integer choiceAction(List<String> actions) {
+    public Integer choiceAction(String message, List<String> actions) {
         return random.nextInt(actions.size());
     }
 }
