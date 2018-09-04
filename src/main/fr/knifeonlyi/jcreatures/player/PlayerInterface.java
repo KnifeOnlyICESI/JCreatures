@@ -24,6 +24,13 @@ public interface PlayerInterface {
     List<CreatureInterface> getCreatures();
 
     /**
+     * Get the type.
+     *
+     * @return The type.
+     */
+    PlayerType getType();
+
+    /**
      * Set the name.
      *
      * @param name The new name.

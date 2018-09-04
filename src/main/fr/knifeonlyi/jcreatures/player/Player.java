@@ -1,5 +1,8 @@
 package fr.knifeonlyi.jcreatures.player;
 
+import fr.knifeonlyi.jcreatures.action.player.ActionPlayerInterface;
+import fr.knifeonlyi.jcreatures.action.player.ConsoleAction;
+import fr.knifeonlyi.jcreatures.action.player.RandomAction;
 import fr.knifeonlyi.jcreatures.creature.CreatureInterface;
 
 import java.util.ArrayList;
@@ -12,15 +15,24 @@ public final class Player implements PlayerInterface {
 
     private String name;
     private List<CreatureInterface> creatures;
+    private PlayerType type;
+    private ActionPlayerInterface actionPlayer;
 
     /**
      * Initialize a new player.
      *
      * @param name The name.
      */
-    public Player(String name) {
+    public Player(String name, PlayerType playerType) {
         this.name = name;
         this.creatures = new ArrayList<>();
+        this.type = playerType;
+
+        if (this.type == PlayerType.PNJ) {
+            this.actionPlayer = new RandomAction();
+        } else {
+            this.actionPlayer = new ConsoleAction();
+        }
     }
 
     @Override
@@ -31,6 +43,10 @@ public final class Player implements PlayerInterface {
     @Override
     public List<CreatureInterface> getCreatures() {
         return new ArrayList<>(this.creatures);
+    }
+
+    public PlayerType getType() {
+        return this.type;
     }
 
     @Override
