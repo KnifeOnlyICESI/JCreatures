@@ -1,11 +1,12 @@
 package fr.knifeonlyi.jcreatures.skill;
 
+import fr.knifeonlyi.choicelib.Choosable;
 import fr.knifeonlyi.jcreatures.creature.CreatureInterface;
 
 /**
  * The base interface for all interfaces.
  */
-public interface SkillInterface {
+public interface SkillInterface extends Choosable {
 
     /**
      * Get the name.

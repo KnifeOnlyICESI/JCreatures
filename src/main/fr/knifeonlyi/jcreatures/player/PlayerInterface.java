@@ -57,7 +57,7 @@ public interface PlayerInterface {
      * @param target An other player to attack.
      * @return TRUE if the player can be attack. FALSE otherwise.
      */
-    Boolean attack(PlayerInterface target) throws InterruptedException;
+    Boolean attack(PlayerInterface target);
 
     /**
      * Check if the player have alive creatures.

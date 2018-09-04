@@ -1,14 +1,16 @@
 package fr.knifeonlyi.jcreatures.player;
 
-import fr.knifeonlyi.jcreatures.action.player.ActionPlayerInterface;
-import fr.knifeonlyi.jcreatures.action.player.ConsoleAction;
-import fr.knifeonlyi.jcreatures.action.player.RandomAction;
+import fr.knifeonlyi.choicelib.Action;
+import fr.knifeonlyi.choicelib.Choice;
+import fr.knifeonlyi.choicelib.ConsoleChoice;
+import fr.knifeonlyi.choicelib.RandomChoice;
 import fr.knifeonlyi.jcreatures.creature.CreatureInterface;
 import fr.knifeonlyi.jcreatures.skill.SkillInterface;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * Represent a player.
@@ -23,7 +25,7 @@ public final class Player implements PlayerInterface {
     private String name;
     private List<CreatureInterface> creatures;
     private PlayerType type;
-    private ActionPlayerInterface actionPlayer;
+    private Choice chooser;
 
     /**
      * Initialize a new player.
@@ -36,9 +38,9 @@ public final class Player implements PlayerInterface {
         this.type = playerType;
 
         if (this.type == PlayerType.PNJ) {
-            this.actionPlayer = new RandomAction();
+            this.chooser = new RandomChoice(new SecureRandom());
         } else {
-            this.actionPlayer = new ConsoleAction();
+            this.chooser = new ConsoleChoice(new Scanner(System.in));
         }
     }
 
@@ -80,12 +82,18 @@ public final class Player implements PlayerInterface {
     }
 
     @Override
-    public Boolean attack(PlayerInterface target) throws InterruptedException {
-        Integer actionPlayerChoice;
-        Integer creaturePlayerChoice;
+    public Boolean attack(PlayerInterface target) {
+        Action chooserChoice;
+        Action creaturePlayerChoice;
 
-        String[] playerActions = {PLAYER_ACTIONS_ATTACK, PLAYER_ACTIONS_ESCAPE};
-        String[] creatureActions = {CREATURE_ACTIONS_BASE_ATTACK, CREATURE_ACTIONS_SKILL_ATTACK};
+        ArrayList<Action> playerActions = new ArrayList<>();
+        ArrayList<Action> creatureActions = new ArrayList<>();
+
+        playerActions.add(new Action(PLAYER_ACTIONS_ATTACK));
+        playerActions.add(new Action(PLAYER_ACTIONS_ESCAPE));
+
+        creatureActions.add(new Action(CREATURE_ACTIONS_BASE_ATTACK));
+        creatureActions.add(new Action(CREATURE_ACTIONS_SKILL_ATTACK));
 
         CreatureInterface engagedCreature;
         CreatureInterface targetCreature;
@@ -96,28 +104,30 @@ public final class Player implements PlayerInterface {
 
             return false;
         } else {
-            actionPlayerChoice = this.actionPlayer.choiceAction(
-                "Choisissez une action : ",
-                Arrays.asList(playerActions)
-            );
+            chooserChoice = (Action) this.chooser.choose(playerActions, "Choisissez une action : ");
 
-            if (PLAYER_ACTIONS_ESCAPE.equals(playerActions[actionPlayerChoice])) {
+            if (chooserChoice.getName().equals(PLAYER_ACTIONS_ESCAPE)) {
+                System.out.println(String.format("FIN DU COMBAT (%s a fuit le combat.)", this.getName()));
+
                 return false;
             }
 
-            engagedCreature = this.actionPlayer.choiceCreature("Choisissez la créature à engager.", this.creatures);
-
-            targetCreature = this.actionPlayer.choiceCreature(
-                "Choisissez la créature à attaquer.",
-                target.getCreatures()
+            engagedCreature = (CreatureInterface) this.chooser.choose(
+                this.creatures,
+                "Choisissez la créature à engager : "
             );
 
-            creaturePlayerChoice = this.actionPlayer.choiceAction(
-                "Choisissez une action de créature",
-                Arrays.asList(creatureActions)
+            targetCreature = (CreatureInterface) this.chooser.choose(
+                target.getCreatures(),
+                "Choisissez la créature à attaquer : "
             );
 
-            if (CREATURE_ACTIONS_BASE_ATTACK.equals(creatureActions[creaturePlayerChoice])) {
+            creaturePlayerChoice = (Action) this.chooser.choose(
+                creatureActions,
+                "Choisissez l'action que doit effectuer la créature engagé : "
+            );
+
+            if (creaturePlayerChoice.getName().equals(CREATURE_ACTIONS_BASE_ATTACK)) {
                 engagedCreature.attack(targetCreature);
                 System.out.println(String.format(
                     "%s attaque %s avec une attaque de base (-%s pv)",
@@ -126,14 +136,22 @@ public final class Player implements PlayerInterface {
                     engagedCreature.getStrength()
                 ));
             } else {
-                engagedSkill = this.actionPlayer.choiceSkill(
-                    "Choisissez la compétence à utiliser.",
-                    engagedCreature.getSkills()
+                engagedSkill = (SkillInterface) this.chooser.choose(
+                    engagedCreature.getSkills(),
+                    "Choisissez la compétence à utiliser."
                 );
 
                 engagedSkill.execute(engagedCreature, targetCreature);
             }
         }
+
+        System.out.println(
+            String.format(
+                "Status créature attaquée : %s [%s pv] [%s pa]",
+                targetCreature.getName(),
+                targetCreature.getHP(),
+                targetCreature.getAP()
+            ));
 
         return true;
     }

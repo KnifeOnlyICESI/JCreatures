@@ -1,5 +1,6 @@
 package fr.knifeonlyi.jcreatures.creature;
 
+import fr.knifeonlyi.choicelib.Choosable;
 import fr.knifeonlyi.jcreatures.skill.SkillInterface;
 
 import java.util.List;
@@ -7,7 +8,7 @@ import java.util.List;
 /**
  * The base interface for all creatures.
  */
-public interface CreatureInterface {
+public interface CreatureInterface extends Choosable {
 
     /**
      * Get the name.

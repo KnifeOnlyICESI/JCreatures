@@ -24,16 +24,11 @@ public class Main {
         Duel duel = new Duel(player1, player2);
 
         creaturesPlayer1.add(CREATURE_FACTORY.createCreature(CreatureType.DRAGON, "Dragon"));
-
         creaturesPlayer2.add(CREATURE_FACTORY.createCreature(CreatureType.HUNTER, "Hunter"));
 
         player1.setCreatures(creaturesPlayer1);
         player2.setCreatures(creaturesPlayer2);
 
-        try {
-            duel.fight();
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
+        duel.fight();
     }
 }
